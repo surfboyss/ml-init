@@ -1,0 +1,30 @@
+import subprocess
+from datetime import datetime
+import schedule
+import time
+
+file_path = '/Users/ilyasserraji/repository/ml-init/test'
+
+def daily_commit():
+    # Générer un nouveau message de commit avec la date actuelle
+    today_date = datetime.now().strftime('%Y-%m-%d')
+    commit_message = f'Commit quotidien - {today_date}'
+
+    # Ajouter les changements au suivi (staging)
+    subprocess.run(['git', 'add', file_path])
+
+    # Effectuer le commit avec le message généré
+    subprocess.run(['git', 'commit', '-m', commit_message])
+
+    print(f"Commit réussi le {today_date}")
+
+# Planifier l'exécution quotidienne du script à minuit
+#schedule.every().day.at("20:41").do(daily_commit)
+
+#while True:
+ #   schedule.run_pending()
+  #  time.sleep(1)
+
+if __name__ =='__main__':
+    subprocess.run(['git', 'add', file_path])
+    print('added')
