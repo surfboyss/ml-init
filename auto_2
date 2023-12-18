@@ -25,6 +25,10 @@ def daily_commit():
  #   schedule.run_pending()
   #  time.sleep(1)
 
-if __name__ =='__main__':
+#if __name__ =='__main__':
     subprocess.run(['git', 'add', file_path])
     print('added')
+    ttt
+
+
+    
