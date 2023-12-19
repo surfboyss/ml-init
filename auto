@@ -18,3 +18,5 @@ if __name__ == "__main__":
     file_path = '/Users/ilyasserraji/repository/ml-init/test' 
     commit_message = '<COMMIT_MESSAGE>'  
     daily_commit(repo_path, file_path, commit_message)
+
+    TimeoutError
